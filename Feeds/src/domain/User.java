@@ -13,21 +13,13 @@ import java.util.HashSet;
  */
 public class User {
 
-    private String username, picture, password;
+    private String username, picture, password, bio, nickname;
     private HashSet<User> friends;
     private HashSet<Feed> subscriptions;
 
     public User(String username, String password, HashSet<Feed> subscriptions) {
         this.username = username;
         this.password = password;
-        this.subscriptions = subscriptions;
-    }
-
-    public User(String username, String picture, String password, HashSet<User> friends, HashSet<Feed> subscriptions) {
-        this.username = username;
-        this.picture = picture;
-        this.password = password;
-        this.friends = friends;
         this.subscriptions = subscriptions;
     }
 
@@ -78,4 +70,22 @@ public class User {
     public void addSubscription(Feed feed) {
         subscriptions.add(feed);
     }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+    
+    
 }

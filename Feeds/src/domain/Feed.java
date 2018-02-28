@@ -16,16 +16,12 @@ public class Feed {
     private String name, picture;
     private HashSet<Post> posts;
     private Integer numPosts, numSubs;
+    private HashSet<User> administrators;
 
-    public Feed(Integer feedID, String name) {
+    public Feed(Integer feedID, String name, HashSet<User> administrators) {
         this.feedID = feedID;
         this.name = name;
-    }
-
-    public Feed(Integer feedID, String name, String picture) {
-        this.feedID = feedID;
-        this.name = name;
-        this.picture = picture;
+        this.administrators = administrators;
     }
 
     public Integer getFeedID() {
@@ -79,4 +75,14 @@ public class Feed {
     public void addPost(Post post){
         posts.add(post);
     }
+
+    public HashSet<User> getAdministrators() {
+        return administrators;
+    }
+
+    public void setAdministrators(HashSet<User> administrators) {
+        this.administrators = administrators;
+    }
+    
+    
 }

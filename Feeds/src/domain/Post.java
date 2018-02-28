@@ -12,7 +12,7 @@ import java.util.HashSet;
  *
  * @author cnnrd
  */
-class Post {
+public class Post {
 
     private Integer postID, score;
     private String text;
