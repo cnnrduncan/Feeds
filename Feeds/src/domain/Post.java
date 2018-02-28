@@ -18,7 +18,7 @@ class Post {
     private String text;
     private Feed feed;
     private User poster;
-    private ArrayList<String> images;
+    private ArrayList<String> attachments;
     private HashSet<Post> parentPosts;
 
     public Post(String text, Feed feed) {
@@ -32,17 +32,17 @@ class Post {
         this.poster = poster;
     }
 
-    public Post(String text, Feed feed, ArrayList<String> images) {
+    public Post(String text, Feed feed, ArrayList<String> attachments) {
         this.text = text;
         this.feed = feed;
-        this.images = images;
+        this.attachments = attachments;
     }
 
-    public Post(String text, Feed feed, User poster, ArrayList<String> images) {
+    public Post(String text, Feed feed, User poster, ArrayList<String> attachments) {
         this.text = text;
         this.feed = feed;
         this.poster = poster;
-        this.images = images;
+        this.attachments = attachments;
     }
 
     public Post(String text, Feed feed, HashSet<Post> parentPosts) {
@@ -58,18 +58,18 @@ class Post {
         this.parentPosts = parentPosts;
     }
 
-    public Post(String text, Feed feed, ArrayList<String> images, HashSet<Post> parentPosts) {
+    public Post(String text, Feed feed, ArrayList<String> attachments, HashSet<Post> parentPosts) {
         this.text = text;
         this.feed = feed;
-        this.images = images;
+        this.attachments = attachments;
         this.parentPosts = parentPosts;
     }
 
-    public Post(String text, Feed feed, User poster, ArrayList<String> images, HashSet<Post> parentPosts) {
+    public Post(String text, Feed feed, User poster, ArrayList<String> attachments, HashSet<Post> parentPosts) {
         this.text = text;
         this.feed = feed;
         this.poster = poster;
-        this.images = images;
+        this.attachments = attachments;
         this.parentPosts = parentPosts;
     }
 
@@ -97,12 +97,37 @@ class Post {
         return poster;
     }
 
-    public ArrayList<String> getImages() {
-        return images;
+    public ArrayList<String> getAttachments() {
+        return attachments;
     }
 
     public HashSet<Post> getParentPosts() {
         return parentPosts;
     }
 
+    public void setPostID(Integer postID) {
+        this.postID = postID;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setFeed(Feed feed) {
+        this.feed = feed;
+    }
+
+    public void setPoster(User poster) {
+        this.poster = poster;
+    }
+
+    public void setAttachments(ArrayList<String> attachments) {
+        this.attachments = attachments;
+    }
+
+    public void setParentPosts(HashSet<Post> parentPosts) {
+        this.parentPosts = parentPosts;
+    }
+
+    
 }
