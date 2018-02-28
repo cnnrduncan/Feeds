@@ -22,15 +22,11 @@ public interface FeedDAO {
     public void delete(Feed feed);
     
     //Get feed information
-    public String getName(Feed feed);
-    public String getPicture(Feed feed);
-    public Collection<Post> getPosts(Feed feed, Integer numPosts);
-    public Integer getNumPosts(Feed feed);
-    public Integer getNumSubs(Feed feed);
+    public Collection<Post> getPosts(Feed feed, Integer postsToRetrieve);
     public Collection<User> getAdministrators(Feed feed);
     
     //Find feeds by using known information
-    public Post searchID(String feedID);
+    public Feed searchID(String feedID);
     public Collection<Feed> searchName(String feedName);
-    public Collection<Feed> searchAdministrator(User admin);
+    //public Collection<Feed> searchAdministrator(User admin);
 }

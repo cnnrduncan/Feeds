@@ -16,36 +16,36 @@ public class Post {
 
     private Integer postID, score;
     private String text;
-    private Feed feed;
+    private HashSet<Feed> feeds;
     private User poster;
     private ArrayList<String> attachments;
     private HashSet<Post> parentPosts;
 
-    public Post(String text, Feed feed) {
+    public Post(String text, HashSet<Feed>  feed) {
         this.text = text;
-        this.feed = feed;
+        this.feeds = feed;
     }
 
-    public Post(String text, Feed feed, User poster) {
+    public Post(String text, HashSet<Feed>  feed, User poster) {
         this.text = text;
-        this.feed = feed;
+        this.feeds = feed;
         this.poster = poster;
     }
 
-    public Post(String text, Feed feed, ArrayList<String> attachments) {
+    public Post(String text, HashSet<Feed>  feed, ArrayList<String> attachments) {
         this.text = text;
         this.feed = feed;
         this.attachments = attachments;
     }
 
-    public Post(String text, Feed feed, User poster, ArrayList<String> attachments) {
+    public Post(String text, HashSet<Feed>  feed, User poster, ArrayList<String> attachments) {
         this.text = text;
         this.feed = feed;
         this.poster = poster;
         this.attachments = attachments;
     }
 
-    public Post(String text, Feed feed, HashSet<Post> parentPosts) {
+    public Post(String text, HashSet<Feed>  feed, HashSet<Post> parentPosts) {
         this.text = text;
         this.feed = feed;
         this.parentPosts = parentPosts;

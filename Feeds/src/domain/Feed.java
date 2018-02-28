@@ -83,6 +83,10 @@ public class Feed {
     public void setAdministrators(HashSet<User> administrators) {
         this.administrators = administrators;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Feed{" + "feedID=" + feedID + ", name=" + name + ", numPosts=" + numPosts + ", numSubs=" + numSubs + '}';
+    }
     
 }

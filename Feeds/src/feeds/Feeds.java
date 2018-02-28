@@ -5,6 +5,11 @@
  */
 package feeds;
 
+import dao.FeedDAO;
+import dao.JDBCFeedDAO;
+import domain.Feed;
+import java.util.HashSet;
+
 /**
  *
  * @author cnnrd
@@ -15,7 +20,8 @@ public class Feeds {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FeedDAO feedDAO = new JDBCFeedDAO();
+        
     }
     
 }
